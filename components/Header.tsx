@@ -1,19 +1,18 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
-import { useState } from 'react'
+import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Services', href: '#services' },
-    { label: 'Pricing', href: '#pricing' },
-    { label: 'Team', href: '#team' },
-    { label: 'Contact', href: '#contact' },
-  ]
+    { label: "Home", href: "#home" },
+    { label: "Services", href: "#services" },
+    { label: "Team", href: "#team" },
+    { label: "Contact", href: "#contact" },
+  ];
 
   return (
     <motion.header
@@ -37,7 +36,7 @@ export default function Header() {
               <motion.a
                 key={item.label}
                 href={item.href}
-                whileHover={{ color: '#8B7355' }}
+                whileHover={{ color: "#8B7355" }}
                 className="text-[#2D2421] font-lora transition-colors duration-300 hover:text-[#8B7355]"
               >
                 {item.label}
@@ -91,5 +90,5 @@ export default function Header() {
         )}
       </div>
     </motion.header>
-  )
+  );
 }
